@@ -33,3 +33,8 @@
 /** Подключение стилей отдельных блоков и секций */
 @import 'components/header';
 @import 'components/footer';
+
+@import 'pages/mainSection';	
+@import 'pages/servicesSection';
+@import 'pages/aboutUs.scss';
+@import 'pages/whyChooseUs.scss';

@@ -1,7 +1,7 @@
 // Firefox
 * {
   scrollbar-width: rem(8);
-  scrollbar-color: $firstAccentColor #d6d6d6;
+  scrollbar-color: $accentColor #d6d6d6;
 
   // Chrome, Edge, and Safari
   &::-webkit-scrollbar {
@@ -18,11 +18,11 @@
   &::-webkit-scrollbar-thumb {
     border-radius: rem(4);
     border: 0 none #fff;
-    background-color: lighten($firstAccentColor, 10%);
+    background-color: lighten($accentColor, 10%);
     transition: all 280ms ease-in-out;
 
     &:hover {
-      background-color: $firstAccentColor;
+      background-color: $accentColor;
     }
   }
 }

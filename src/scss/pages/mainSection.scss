@@ -1,0 +1,91 @@
+.main-section {
+    background-color: #2F303A;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 600px;
+    background-image:url(../../images/background.jpg);
+    background-size: cover;
+
+    &__container {
+        max-width: 1200px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        margin-top: 200px;
+        margin-bottom: 30px;
+        width: 696px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__order {
+        padding: 10px 32px;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.63;
+        text-align: center;
+        border: solid transparent;
+        background-color: var(--accent-text-color);
+        color: var(--white-text-color);
+        font-family: inherit;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+            background-color: var(--primary-text-color);
+            cursor: pointer;
+        }
+    }
+}
+
+// Button Order service 
+
+
+.btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.btn_text {
+    position: relative;
+    z-index: 2;
+}
+
+.btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $accentColor;
+    transition: all .35s;
+    color: $whiteColor;
+}
+
+.btn:hover .btn_text {
+    color: #fff;
+}
+
+.btn:hover:after {
+    width: 100%;
+}

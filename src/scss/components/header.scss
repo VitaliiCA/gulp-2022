@@ -1,37 +1,43 @@
 // =====================================================================================================================
+
+
 .header {
   position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
+    background-color: #1d356d;
   
     -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
     -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
     box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
-      background-color: #11ffee00;
 
   &__container {
   justify-content: start;
     align-items: center;
     display: flex;
   
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
 .menu {
+          margin-left: auto;
+          margin-right: 30px;
   &__list {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
+
   }
 
   &__link {
-
+    color: $whiteColor;
+    font-weight: 700;
   }
 }
 
