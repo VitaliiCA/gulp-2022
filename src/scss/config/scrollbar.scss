@@ -18,7 +18,7 @@
   &::-webkit-scrollbar-thumb {
     border-radius: rem(4);
     border: 0 none #fff;
-    background-color: lighten($accentColor, 10%);
+    background-color: $blackColor;
     transition: all 280ms ease-in-out;
 
     &:hover {
