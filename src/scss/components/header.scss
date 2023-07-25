@@ -15,7 +15,6 @@
   justify-content: start;
     align-items: center;
     display: flex;
-  
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -30,16 +29,37 @@
         align-items: center;
         justify-content: space-between;
         gap: 40px;
-
   }
 
   &__link {
     color: $whiteColor;
     font-weight: 700;
+    position: relative;
+    padding: 10px 10px;
+
         &:hover,
         &:focus {
-          color: $greyColor;
-      
-        }
+            color: $accentColor;
+          }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: block;
+            background: none repeat scroll 0 0 transparent;
+            height: 2px;
+            width: 0;
+            background: $accentColor;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+          }
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
   }
 }
+
+
+

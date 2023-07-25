@@ -1,7 +1,14 @@
-.whyChooseUs-card {
+.information{
+    position: relative;
+    background: url('../../images/background_black.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.information-card {
     display: flex;
     flex-wrap: wrap;
-    background: $blackColor;
 
     &__item {
         @media screen and (max-width: 767px) {
@@ -25,12 +32,10 @@
         margin-bottom: 30px;
     }
 
-
     &__number {
         color: $accentColor;
         width: 40px;
     }
-
 
     &__title {
         font-size: 18px;
@@ -38,8 +43,7 @@
         letter-spacing: 0.06em;
         margin-top: 20px;
         margin-bottom: 0;
-        margin-left: 24px;
-        color: $whiteColor;
+        color: $greyColor;
     }
 
     &__desc {
@@ -47,7 +51,6 @@
         line-height: 1.88;
         margin-top: 4px;
         margin-bottom: 20px;
-        margin-left: 63px;
-        color: $greyColor;
+        color: $whiteColor;
     }
 }

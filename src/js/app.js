@@ -14,6 +14,23 @@ import {
   addLoadedClass,
 } from './modules';
 
+VANTA.NET({
+  el: '#vanta',
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  scale: 1.0,
+  scaleMobile: 1.0,
+  color: 0x1fe1f2,
+  backgroundColor: 0x0,
+  points: 18.0,
+  maxDistance: 21.0,
+  spacing: 18.0,
+});
+
+// import appAnimation from './animation/appAnimation';
 // import BurgerMenu from './modules/BurgerMenu';
 
 // import Tabs from 'modules/Tabs';
@@ -28,6 +45,7 @@ import {
  ! (i) необходимо для корректного отображения webp из css
  */
 isWebp();
+// appAnimation();
 
 /* Добавление класса touch для HTML если браузер мобильный */
 // addTouchClass();
@@ -62,3 +80,29 @@ isWebp();
 // togglePopupWindows();
 
 // const tabs = new Tabs('default-tabs', {});
+
+const modals = document.querySelectorAll('.modal');
+const closeBtns = document.querySelectorAll('.close');
+
+function showModal(event) {
+  event.preventDefault();
+  const modalId = this.getAttribute('href');
+  document.querySelector(modalId).style.display = 'block';
+}
+
+function closeModal(event) {
+  event.preventDefault();
+  const modal = this.closest('.modal');
+  modal.style.display = 'none';
+}
+
+const liItems = document.querySelectorAll('.services-card__item');
+for (let i = 0; i < liItems.length; i++) {
+  liItems[i]
+    .querySelector('.services-card__link')
+    .addEventListener('click', showModal);
+}
+
+for (let j = 0; j < closeBtns.length; j++) {
+  closeBtns[j].addEventListener('click', closeModal);
+}

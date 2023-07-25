@@ -76,7 +76,9 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "gulp-concat": "^2.6.1",
     "sass": "^1.45.1",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "vanta": "^0.5.24"
   }
 }

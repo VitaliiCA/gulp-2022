@@ -2,7 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-        justify-content: space-between;
+    justify-content: space-between;
+    background: $sectionBackground;
+    margin-bottom: -1px;
 
     &__item {
         @media screen and (max-width: 767px) {
@@ -19,9 +21,9 @@
         @media screen and (min-width: 1200px) {
             width: calc((100% - 3 * 30px) / 3);
             margin: 15px;
-            height: 200px;
         }
-
+        background: rgb(17, 18, 16, 0.2);
+        
         width: 370px;
         margin-right: 30px;
         margin-bottom: 30px;
@@ -37,125 +39,159 @@
         //     margin-bottom: 0;
         // }
 
-        &:hover,
-        &:focus {
-            background-color: $accentColor;
-            color: antiquewhite;
-        }
+
     }
 
     &__title {
-        font-size: 18px;
+        font-size: 22px;
         line-height: 2;
         letter-spacing: 0.06em;
         margin-top: 20px;
         margin-bottom: 0;
         margin-left: 24px;
-        color: $chapterColor;
+        color: $whiteColor;
         font-weight: 600;
     }
+
+        &__line {
+            border-bottom: 3px solid $accentColor;
+            width: 60px;
+            margin: 20px 24px;
+        }
+
 
     &__desc {
         font-size: 16px;
         line-height: 1.88;
-        color: $greyColor;
+        color: $whiteColor;
         margin-top: 4px;
         margin-bottom: 20px;
         margin-left: 24px;
     }
 
     &__link {
-            color: $accentColor;
+            color: $whiteColor;
             font-weight: 600;
+            font-size: 22px;
+            
+                &:hover,
+                &:focus {
+                        color: $accentColor;
+                    }
         }
     &__block{
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             margin-left: 24px;
             justify-content: space-between;
             max-width: 90%;
             margin-bottom: 20px;
-            position: absolute;
-            bottom: 0;
+
     }
     &__price{
+        margin: 0;
         font-weight: 700;
-        color: #000;
+        color: $accentColor;
         left: 0;
+        font-size: 22px;
     }
 }
-.services-card__item:hover h2,
-.services-card__item:hover p,
-.services-card__item:hover a{
-    color: $whiteColor;
+
+.services-card__item {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid transparent;
+    overflow: hidden;
+
 }
 
-//Arrow 
-// .arrow-hover {
-//     cursor: pointer;
-//     position: relative;
-//     width: 80px;
-//     height: 50px;
-//     margin: 20px;
-//     margin-top: 33px;
-// }
 
-// .arrow {
-//     position: relative;
-//     top: 20px;
-//     width: 30px;
-//     height: 2px;
-//     background-color: $accentColor;
-//     box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-//     left: 0;
-//     display: block;
-// } 
-
-// .arrow::after {
-//     content: '';
-//     position: absolute;
-//     width: 9px;
-//     height: 2px;
-//     top: -2px;
-//     right: -1px;
-//     background-color: $accentColor;
-//     transform: rotate(30deg);
-// }
-
-// .arrow::before {
-//     content: '';
-//     position: absolute;
-//     width: 9px;
-//     height: 2px;
-//     top: 2px;
-//     right: -1px;
-//     background-color: $accentColor;
-//     box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-//     transform: rotate(-30deg);
-// }
-// .services-card__item:hover .arrow,
-// .services-card__item:hover .arrow::before,
-// .services-card__item:hover .arrow::after {
-//     background-color: $whiteColor;
-// }
-
-// .services-card__link:hover +  .arrow-hover {
-//     animation: arrow-hover 2s linear infinite;
-// }
+.services-card__item:hover {
+    border-color: $accentColor;
+}
 
 
+.services-card__line {
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
 
-// @keyframes arrow-hover {
-//     0% {
-//         left: 0;
-//     }
 
-//     50% {
-//         left: 90px;
-//     }
+.services-card__item:hover .services-card__line {
+    transform: scaleX(1);
+}
 
-//     100% {
-//         left: 0;
-//     }
-// }
+.services-card__block {
+    position: relative;
+}
+
+.services-card__vertical-line {
+    width: 2px;
+    height: 0;
+    background-color: $accentColor;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.services-card__item:hover .services-card__vertical-line {
+    transform: scaleY(1);
+}
+
+
+.services-card__right-line {
+    width: 0;
+    height: 100%;
+    background-color: $accentColor;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.services-card__item:hover .services-card__right-line {
+    transform: scaleX(1);
+}
+
+//Modal 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* Close btn */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

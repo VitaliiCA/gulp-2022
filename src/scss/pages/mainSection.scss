@@ -1,18 +1,18 @@
 .main-section {
-    background-color: #2F303A;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 600px;
-    background-image:url(../../images/background.jpg);
+    // background-image:url(../../images/background.jpg);
     background-size: cover;
-
+    margin-bottom: -1px;
+    margin: auto;
     &__container {
         max-width: 1200px;
     }
 
     &__title {
         font-weight: 700;
-        font-size: 70px;
+        font-size: 32px;
         line-height: 1.36;
         letter-spacing: 0.06em;
         margin-top: 200px;
@@ -20,6 +20,16 @@
         width: 696px;
         margin-left: auto;
         margin-right: auto;
+        color: $whiteColor;
+    }
+
+    &__list{
+        margin: 0;
+        padding: 0;
+    }
+
+    &__text{
+        color: $whiteColor;
     }
 
     &__order {
@@ -43,49 +53,12 @@
     }
 }
 
-// Button Order service 
-
-
-.btn {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
-    display: block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: #333;
-    border: 2px solid #333;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    transition: all .35s;
+.vanta {
+    height: 800px;
 }
 
-.btn_text {
-    position: relative;
-    z-index: 2;
+.icons {
+    fill: $accentColor;
 }
 
-.btn:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: $accentColor;
-    transition: all .35s;
-    color: $whiteColor;
-}
 
-.btn:hover .btn_text {
-    color: #fff;
-}
-
-.btn:hover:after {
-    width: 100%;
-}
