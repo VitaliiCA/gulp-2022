@@ -81,6 +81,7 @@ isWebp();
 
 // const tabs = new Tabs('default-tabs', {});
 
+//modal section service
 const modals = document.querySelectorAll('.modal');
 const closeBtns = document.querySelectorAll('.close');
 
@@ -106,3 +107,41 @@ for (let i = 0; i < liItems.length; i++) {
 for (let j = 0; j < closeBtns.length; j++) {
   closeBtns[j].addEventListener('click', closeModal);
 }
+
+//send request
+document
+  .getElementById('contactForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const number = document.getElementById('number').value;
+
+    const recipientEmail = 'kalinin.vitaliy.ua@gmail.com';
+
+    const data = {
+      name: name,
+      email: email,
+      number: number,
+    };
+
+    fetch('https://example.com/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert('Форма успешно отправлена!');
+        } else {
+          alert('Произошла ошибка при отправке формы.');
+        }
+      })
+      .catch((error) => {
+        console.error('Ошибка:', error);
+        alert('Произошла ошибка при отправке формы.');
+      });
+  });

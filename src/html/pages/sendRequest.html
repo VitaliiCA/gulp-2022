@@ -44,9 +44,26 @@
 
     </ul>
 
+    <!-- <form class="input-group">
+        <input type="text" id="email" class="input-group__input" required>
+        <label for="email" class="input-group__label">Email</label>
+    </form> -->
+    <form class="input-group" id="contactForm">
+        <div class="input-field">
+            <input type="text" id="name" class="input-group__input" required>
+            <label for="name" class="input-group__label">Name</label>
+        </div>
 
+        <div class="input-field">
+            <input type="email" id="email" class="input-group__input" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <label for="email" class="input-group__label">Email</label>
+        </div>
 
+        <div class="input-field">
+            <input type="tel" id="number" class="input-group__input" required>
+            <label for="number" class="input-group__label">Number</label>
+        </div>
 
-
-
-</div>
+        <button type="submit" class="btn">Отправить</button>
+    </form>

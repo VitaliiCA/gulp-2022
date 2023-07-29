@@ -1,7 +1,18 @@
+.whyChooseUs_block{
+    background: $blackColor;
+    
+}
+
+.whyChooseUsTitle{
+    color: $whiteColor;
+    padding: 32px;
+    margin-left: 39px;
+}
+
 .whyChooseUs-card {
     display: flex;
     flex-wrap: wrap;
-    background: $blackColor;
+    
 
     &__item {
         @media screen and (max-width: 767px) {
