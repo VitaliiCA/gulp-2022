@@ -1,65 +1,80 @@
-// =====================================================================================================================
-
-
 .header {
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: $blackColor;
-  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $blackColor;
+}
 
+.header {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+
+  .header-is-sticky & {
+    // ..стили для липкого хедера
+    position: fixed;
+    background-color: #007aff;
+  }
 
   &__container {
-  justify-content: start;
+    justify-content: start;
     align-items: center;
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    .header-is-sticky & {
+      height: rem($headerHeight - 50);
+    }
+
   }
 }
 
 .menu {
-          margin-left: auto;
-          margin-right: 30px;
+  margin-left: auto;
+  margin-right: 30px;
+
   &__list {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
   }
 
   &__link {
     color: $whiteColor;
     font-weight: 700;
-    position: relative;
-    padding: 10px 10px;
 
-        &:hover,
-        &:focus {
-            color: $accentColor;
-          }
+    @include mediaMx(768) {
+      display: block;
+      position: relative;
+      padding: 10px 10px;
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            display: block;
-            background: none repeat scroll 0 0 transparent;
-            height: 2px;
-            width: 0;
-            background: $accentColor;
-            transition: width 0.3s ease 0s, left 0.3s ease 0s;
-          }
-          &:hover::after {
-            width: 100%;
-            left: 0;
-          }
+      &:hover,
+      &:focus {
+        color: $accentColor;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        display: block;
+        background: none repeat scroll 0 0 transparent;
+        height: 2px;
+        width: 0;
+        background: $accentColor;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      }
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+      }
+    }
   }
 }
-
-
-

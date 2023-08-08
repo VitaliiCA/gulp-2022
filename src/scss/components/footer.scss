@@ -45,7 +45,6 @@
     }
   }
 
-
   margin-left: auto;
   margin-right: auto;
 
@@ -77,81 +76,3 @@
   }
 
 }
-
-// .footer {
-//   background-color: $blackColor;
-//   color: $whiteColor;
-//   padding: 50px 0;
-//   font-family: Arial, sans-serif;
-
-//   &__container {
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center; // Чтобы элементы были по вертикали по центру
-//   }
-
-//   &__tablet {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-start;
-//     width: 100%;
-
-//     .company-address {
-//       .footer__link {
-//         display: block;
-
-//         img {
-//           margin-bottom: 15px;
-//           height: 70px; // Указываем высоту прямо здесь, чтобы не повторять в HTML
-//         }
-//       }
-
-//       .footer__text {
-//         font-size: 16px;
-//         margin-bottom: 15px;
-//         opacity: 0.8; // Добавляем небольшую прозрачность для менее выделенного текста
-//       }
-
-//       .footer__line {
-//         width: 50px;
-//         height: 2px;
-//         background-color: $whiteColor;
-//       }
-//     }
-
-//     .services {
-//       flex-grow: 1;
-//       padding-left: 30px;
-//       max-width: 300px;
-
-//       &__title {
-//         font-size: 20px;
-//         font-weight: bold;
-//         margin-bottom: 20px;
-//       }
-
-//       &__list {
-//         list-style: none;
-//         padding: 0;
-
-//         &__item {
-//           margin-bottom: 15px;
-
-//           .services__link,
-//           .address__link {
-//             color: $whiteColor;
-//             text-decoration: none;
-//             transition: 0.3s ease; // Плавное изменение при наведении
-
-//             &:hover {
-//               text-decoration: underline;
-//               opacity: 0.9; // Небольшое изменение прозрачности при наведении
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
