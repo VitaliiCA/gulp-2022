@@ -7,29 +7,50 @@
  * Если мы хотим добавить модуль следует его раскомментировать
  */
 
-import {
-  isWebp,
-  headerFixed,
-  togglePopupWindows,
-  addTouchClass,
-  addLoadedClass,
-} from './modules';
+// import {
+//   isWebp,
+//   headerFixed,
+//   togglePopupWindows,
+//   addTouchClass,
+//   addLoadedClass,
+// } from './modules';
 
-VANTA.NET({
-  el: '#vanta',
+// VANTA.NET({
+//   el: '#vanta',
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.0,
+//   minWidth: 200.0,
+//   scale: 1.0,
+//   scaleMobile: 1.0,
+//   // color: 0x0,
+//   backgroundColor: 0xffffff,
+//   color: 0x474B4F,
+//   // backgroundColor: 0x222629,
+//   points: 18.0,
+//   maxDistance: 21.0,
+//   spacing: 18.0,
+// });
+
+VANTA.DOTS({
+  el: "#vanta",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  color: 0x1fe1f2,
-  backgroundColor: 0x0,
-  points: 18.0,
-  maxDistance: 21.0,
-  spacing: 18.0,
-});
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x959595,
+  color2: 0x848484,
+  backgroundColor: 0xffffff,
+  size: 2.90,
+  spacing: 15.00,
+  speed: 2.0,
+  showLines: false
+
+})
 
 // import appAnimation from './animation/appAnimation';
 // import BurgerMenu from './modules/BurgerMenu';
@@ -48,7 +69,7 @@ VANTA.NET({
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML
  ! (i) необходимо для корректного отображения webp из css
  */
-isWebp();
+// isWebp();
 // appAnimation();
 
 import BaseHelpers from './helpers/BaseHelpers.js';
@@ -99,19 +120,47 @@ new Tabs('tabs-example', {});
 // const tabs = new Tabs('default-tabs', {});
 
 //modal section service
+// const modals = document.querySelectorAll('.modal');
+// const closeBtns = document.querySelectorAll('.close');
+
+// function showModal(event) {
+//   event.preventDefault();
+//   const modalId = this.getAttribute('href');
+//   document.querySelector(modalId).style.display = 'block';
+// }
+
+// function closeModal(event) {
+//   event.preventDefault();
+//   const modal = this.closest('.modal');
+//   modal.style.display = 'none';
+// }
+
+// const liItems = document.querySelectorAll('.services-card__item');
+// for (let i = 0; i < liItems.length; i++) {
+//   liItems[i]
+//     .querySelector('.services-card__link')
+//     .addEventListener('click', showModal);
+// }
+
+// for (let j = 0; j < closeBtns.length; j++) {
+//   closeBtns[j].addEventListener('click', closeModal);
+// }
 const modals = document.querySelectorAll('.modal');
 const closeBtns = document.querySelectorAll('.close');
 
 function showModal(event) {
   event.preventDefault();
   const modalId = this.getAttribute('href');
-  document.querySelector(modalId).style.display = 'block';
+  const modal = document.querySelector(modalId);
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal(event) {
   event.preventDefault();
   const modal = this.closest('.modal');
   modal.style.display = 'none';
+  document.body.style.overflow = ''; 
 }
 
 const liItems = document.querySelectorAll('.services-card__item');
@@ -125,47 +174,7 @@ for (let j = 0; j < closeBtns.length; j++) {
   closeBtns[j].addEventListener('click', closeModal);
 }
 
+
+
 //send request
-document
-  .getElementById('contactForm')
-  .addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const number = document.getElementById('number').value;
-
-    const recipientEmail = 'kalinin.vitaliy.ua@gmail.com';
-
-    const data = {
-      name: name,
-      email: email,
-      number: number,
-    };
-
-    fetch('https://example.com/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert('Форма успешно отправлена!');
-        } else {
-          alert('Произошла ошибка при отправке формы.');
-        }
-      })
-      .catch((error) => {
-        console.error('Ошибка:', error);
-        alert('Произошла ошибка при отправке формы.');
-      });
-  });
-
-new Accordion('.accordion', {
-  shouldOpenAll: false, // true
-  defaultOpen: [], // [0,1]
-  collapsedClass: 'open',
-});
 

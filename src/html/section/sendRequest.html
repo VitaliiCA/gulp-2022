@@ -1,0 +1,61 @@
+<div class="contact-us">
+    <div class="contact-us__container">
+        <div class="container">
+
+            <h1 class="contact-us-title">Contact us!</h1>
+
+
+            <div class="block">
+                <div class="contact-form-wrapper margin-18-right">
+                    <form class="form">
+                        <div class="form-group">
+                            <input required type="text" class="form-control" id="name" name="name"
+                                placeholder="Your name" tabindex="1" aria-label="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input required type="email" class="form-control" id="email" name="email"
+                                placeholder="Your Email" tabindex="2" aria-label="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" class="form-control" name="phone"
+                                placeholder="Your phone number" tabindex="3" aria-label="Your phone number"
+                                oninput="formatPhoneNumber(this)" maxlength="12">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea required rows="6" cols="60" name="message" class="form-control" id="message"
+                                placeholder="Your message" tabindex="4" aria-label="Message"></textarea>
+                        </div>
+                        <div class="margin-36-top">
+                            <button type="submit" name="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-gif">
+                    <img class="gif" src="../../images/haveQuestions.gif" alt="haveQuestions">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function formatPhoneNumber(input) {
+
+        let cleanedValue = input.value.replace(/\D/g, '');
+
+        if (cleanedValue.length > 11) {
+            cleanedValue = cleanedValue.slice(0, 11);
+        }
+
+        let formattedValue = '';
+        for (let i = 0; i < cleanedValue.length; i++) {
+            if (i === 3 || i === 6) {
+                formattedValue += '-';
+            }
+            formattedValue += cleanedValue[i];
+        }
+
+        input.value = formattedValue;
+    }
+</script>

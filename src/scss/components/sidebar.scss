@@ -1,7 +1,7 @@
 .sidenav {
     height: 100%;
     position: fixed;
-    width: 90px;
+    width: 60px;
     z-index: 1;
     top: 0;
     left: 0;
@@ -17,13 +17,13 @@
         fill: $whiteColor;
         text-align: center;
 
-            &:hover,
-            &:focus {
-                fill: $accentColor; 
-            }
+        &:hover,
+        &:focus {
+            fill: $accentColor;
+        }
     }
 
-    &__list{
+    &__list {
         padding: 0;
     }
 }
@@ -38,13 +38,6 @@
 
 
 
-main {
-    margin-left: 90px;
-    /* Same as the width of the sidenav */
-    font-size: 28px;
-    /* Increased text to enable scrolling */
-    padding: 0px 0px;
-}
 
 @media screen and (max-height: 450px) {
     .sidenav {

@@ -4,7 +4,6 @@ $maxWidthContainer: 1200; // ширина контейнера с учетом p
 $containerWidth: 1160; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ''; // !указать здесь основное семейство шрифта
 $mainWeight: 400; // !указать здесь основное начертание шрифта
 
 $headerHeight: 100;
@@ -14,16 +13,25 @@ $mainRadius: rem(10);
 
 $whiteColor: #fff;
 $blackColor: #000;
-$textColor: #303030;;
-$accentColor:#68f8ed;
-$chapterColor: #070707;
-$greyColor: #717171;
+$textColor: #303030;
 
-$secondColor: #FFC24D;
+
+
+// $accentColor: #00e098;
+$accentColor: #86C232;
+$secondColor: #61892F;
+$darkGrey: #222629;
+$greyColor: #474B4F;
+$lightGrey: #6B6E70;
+
+
+
+$chapterColor: #070707;
+$hoverColor: #0019ff;
 $sectionBackground: #0a0912;
 $sectionBackgroundsec: #111210;
 
-$fontFamily: $mainFont, sans-serif; // Семейство шрифта по умолчанию
+$fontFamily: 'Source Sans 3', sans-serif; // Семейство шрифта по умолчанию
 $fontColor: $blackColor; // Цвет шрифта по умолчанию
 $fontSize: 16; // Размер шрифта по умолчанию
 $fontWeight: $mainWeight; // Жирность шрифта по умолчанию

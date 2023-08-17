@@ -25,6 +25,62 @@
     margin-right: 14px;
 }
 
+.margin-36-top {
+    margin-top: 36px;
+}
+
+.margin-100-top {
+    margin-top: 100px;
+}
+
+// .btn {
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-top: 25px;
+//     display: block;
+//     width: 200px;
+//     height: 40px;
+//     font-size: 18px;
+//     text-decoration: none;
+//     color: $whiteColor;
+//     border: 2px solid $whiteColor;
+//     letter-spacing: 2px;
+//     text-align: center;
+//     position: relative;
+//     transition: all .35s;
+// }
+
+// .btn_text {
+//     position: relative;
+//     z-index: 2;
+//     color: $whiteColor;
+// }
+
+// .btn2:after {
+//     position: absolute;
+//     content: "";
+//     top: 0;
+//     left: 0;
+//     width: 0;
+//     height: 100%;
+//     background: $accentColor;
+//     transition: all .35s;
+//     color: $whiteColor;
+// }
+
+// .btn:hover .btn_text {
+//     color: $accentColor;
+// }
+
+// .btn:hover:after {
+//     width: 100%;
+// }
+
+
+
+//pading
+
+// Button Order service 
 .btn {
     margin-left: auto;
     margin-right: auto;
@@ -32,10 +88,12 @@
     display: block;
     width: 200px;
     height: 40px;
+    line-height: 40px;
     font-size: 18px;
     text-decoration: none;
-    color: $whiteColor;
-    border: 2px solid $whiteColor;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 0;
     letter-spacing: 2px;
     text-align: center;
     position: relative;
@@ -45,10 +103,9 @@
 .btn_text {
     position: relative;
     z-index: 2;
-    color: $whiteColor;
 }
 
-.btn2:after {
+.btn:after {
     position: absolute;
     content: "";
     top: 0;
@@ -61,7 +118,7 @@
 }
 
 .btn:hover .btn_text {
-    color: $accentColor;
+    color: #fff;
 }
 
 .btn:hover:after {
@@ -69,6 +126,48 @@
 }
 
 
+//servicesSection btn
 
-//pading
+.services-btn {
+    display: inline-block;
 
+    border-radius: 10px;
+    border: 4px double $accentColor;
+    color: $whiteColor;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-align: center;
+}
+
+.services-btn .services-text {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.services-btn .services-text:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.services-btn:hover {
+    background-color: $accentColor;
+}
+
+.services-btn:hover .services-text {
+    padding-right: 25px;
+}
+
+.services-btn:hover .services-text:after {
+    opacity: 1;
+    right: 0;
+}

@@ -1,18 +1,25 @@
-.whyChooseUs_block{
+.whyChooseUs_block {
     background: $blackColor;
-    
+
 }
 
-.whyChooseUsTitle{
+.whyChooseUsTitle {
     color: $whiteColor;
-    padding: 32px;
+
     margin-left: 39px;
+    padding-top: 50px;
+
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+
+    font-weight: 600;
 }
 
 .whyChooseUs-card {
     display: flex;
     flex-wrap: wrap;
-    
+
 
     &__item {
         @media screen and (max-width: 767px) {
@@ -31,6 +38,7 @@
             margin: 15px;
         }
 
+        margin-top: 30px;
         width: 370px;
         margin-right: 30px;
         margin-bottom: 30px;
@@ -44,21 +52,22 @@
 
 
     &__title {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 2;
         letter-spacing: 0.06em;
         margin-top: 20px;
         margin-bottom: 0;
         margin-left: 24px;
         color: $whiteColor;
+
     }
 
     &__desc {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.88;
         margin-top: 4px;
         margin-bottom: 20px;
         margin-left: 63px;
-        color: $greyColor;
+        color: $lightGrey;
     }
 }
