@@ -1,6 +1,6 @@
 .footer {
   background-color: $blackColor;
-  padding: 30px 0;
+  padding: 50px 0;
 
   &__text {
     color: $whiteColor;
@@ -66,7 +66,7 @@
     letter-spacing: 0.06em;
     display: block;
     position: relative;
-    padding: 10px 10px;
+
   }
 
   &__item {
@@ -75,14 +75,17 @@
 
   &__link {
     color: $whiteColor;
-    font-size: 16px;
-    line-height: 1.88;
+
+    font-size: 18px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+
     margin-top: 10px;
     margin-bottom: 20px;
 
     &:hover,
     &:focus {
-      color: $greyColor;
+      color: $lightGrey;
 
     }
   }

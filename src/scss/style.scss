@@ -47,11 +47,11 @@
 @import 'components/footer';
 @import 'components/sidebar';
 
-@import 'pages/mainSection';
-@import 'pages/servicesSection';
-@import 'pages/aboutUs.scss';
-@import 'pages/whyChooseUs.scss';
-@import 'pages/sendRequest.scss';
+@import 'mainSections/mainSection';
+@import 'mainSections/servicesSection';
+@import 'mainSections/aboutUs.scss';
+@import 'mainSections/whyChooseUs.scss';
+@import 'mainSections/sendRequest.scss';
 
 
 @import 'components/footer';
