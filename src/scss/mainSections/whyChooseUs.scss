@@ -1,8 +1,3 @@
-.whyChooseUs_block {
-    background: $blackColor;
-
-}
-
 .whyChooseUsTitle {
     color: $whiteColor;
 
@@ -70,4 +65,11 @@
         margin-left: 63px;
         color: $lightGrey;
     }
+}
+
+.whyChooseUs_block {
+    background: $darkGrey;
+    padding: 0;
+    overflow: hidden;
+
 }
