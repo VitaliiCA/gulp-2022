@@ -76,41 +76,6 @@
             margin-left: 0;
         }
     }
-
-    &__btn {
-        font-size: 22px;
-        line-height: 30px;
-        letter-spacing: 0.06em;
-        text-align: center;
-        color: $greyColor;
-
-
-        border-radius: 4px;
-        padding: 6px 22px;
-        border: solid transparent;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &:hover,
-        &:focus {
-            color: $accentColor;
-
-            cursor: pointer;
-            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        }
-    }
-
-    .landingpage-section__btn.active {
-        background-color: #86C232;
-        /* Цвет фона активной кнопки */
-        color: white;
-        /* Цвет текста на активной кнопке */
-        /* Дополнительные стили, если нужно */
-    }
-
-    &__all {
-        color: var(--white-text-color);
-        accent-color: #F5F4FA;
-    }
 }
 
 .section-advantage {
@@ -312,23 +277,6 @@
 
 //REASONS WHY YOU SHOULD ORDER A LANDING PAGE FROM US
 
-.reasons_block {
-    background: $blackColor;
-
-}
-
-.reasonsTitle {
-    color: $whiteColor;
-
-    margin-left: 39px;
-    padding-top: 50px;
-
-    font-size: 32px;
-    line-height: 30px;
-    letter-spacing: 0.06em;
-
-    font-weight: 600;
-}
 
 .reasons-card {
     display: flex;
