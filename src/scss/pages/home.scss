@@ -1,3 +1,13 @@
 h1 {
 	color: red;
 }
+
+.image-wrapper {
+	margin-block: 24px;
+
+	img {
+		width: 320px;
+		height: auto;
+		object-fit: contain;
+	}
+}
