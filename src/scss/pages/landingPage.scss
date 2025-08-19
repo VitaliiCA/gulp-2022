@@ -1,0 +1,339 @@
+.services-section {
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+
+    text-align: center;
+
+    background-size: cover;
+    margin: auto;
+
+    &__title {
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color: $blackColor;
+
+    }
+
+    &__text {
+        color: $accentColor;
+        font-size: 28px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        font-weight: 500;
+    }
+
+    &__btn {
+        background-color: $whiteColor;
+        color: $darkGrey;
+
+        font-size: 22px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        font-weight: 600;
+    }
+
+
+
+}
+
+.landingpage-section {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+        background-color: #f8f8f8;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 30px inset;
+        padding: 20px 0 20px 0;
+
+
+        @media screen and (max-width: 767px) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__item {
+        margin-left: 9px;
+
+        @media screen and (max-width: 767px) {
+            margin-top: 15px;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+}
+
+.section-advantage {
+
+    &__title {
+        margin: 20px 0 20px;
+        padding: 0 0 15px;
+        color: $darkGrey;
+        font-size: 22px;
+        line-height: 24px;
+        position: relative;
+        vertical-align: top;
+        box-shadow: 0 -1px 0 #d0d0d0 inset;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.section-advantage__title:after {
+    left: 0;
+    right: 0;
+    content: '';
+    bottom: -4px;
+    width: 10px;
+    height: 9px;
+    margin: 0 auto;
+    position: absolute;
+    border: 1px solid #fff;
+    background-color: $accentColor;
+}
+
+
+.advantage-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -1px;
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+
+        }
+
+
+        width: 370px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        position:relative;
+        transition: all 1s;
+        // &:nth-child(3n) {
+        //     margin-right: 0;
+        // }
+
+        // &:nth-last-child(-n+3) {
+        //     margin-bottom: 0;
+        // }
+
+
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+
+        color: $darkGrey;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+
+        font-size: 16px;
+        line-height: 1.88;
+        color: $greyColor;
+    }
+}
+
+.pull-left {
+    text-align: left;
+    min-height: 180px;
+    border-left: 5px solid $accentColor;
+}
+
+.pull-right {
+    text-align: right;
+    border-left-width: 0px;
+    border-right: 5px solid $accentColor;
+}
+
+.advantage-block {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+}
+
+
+
+// DEVELOPING A LANDING PAGE BY STEP
+
+.development-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)), url(../../images/backgroundLanding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.development-section_block {
+    background: $blackColor;
+
+}
+
+.development-title {
+    color: $whiteColor;
+
+    margin-left: 39px;
+    padding-top: 50px;
+
+}
+
+.development-section-card {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 3 * 30px) / 3);
+            margin: 15px;
+        }
+
+        display: flex;
+
+        margin-top: 30px;
+        width: 370px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    &__number {
+        color: $accentColor;
+        width: 40px;
+    }
+
+
+    &__title {
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        margin-bottom: 0;
+        margin-left: 10px;
+        color: $accentColor;
+
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 1.88;
+        margin-top: 4px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        color: $whiteColor;
+    }
+}
+
+.development__icon {
+    fill: $secondColor;
+    margin-top: 45px;
+}
+
+//REASONS WHY YOU SHOULD ORDER A LANDING PAGE FROM US
+
+
+.reasons-card {
+    display: flex;
+    flex-wrap: wrap;
+
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 4 * 15px) / 2);
+            margin: 15px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: calc((100% - 3 * 30px) / 3);
+            margin: 15px;
+        }
+
+        margin-top: 30px;
+        width: 370px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    &__number {
+        color: $accentColor;
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+
+    &__title {
+        font-size: 20px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        margin-top: 20px;
+        margin-bottom: 0;
+        margin-left: 24px;
+        color: $whiteColor;
+
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 1.88;
+        margin-top: 4px;
+        margin-bottom: 20px;
+        color: $lightGrey;
+    }
+
+    &__main {
+        font-weight: bold;
+    }
+}

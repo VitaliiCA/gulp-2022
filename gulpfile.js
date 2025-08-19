@@ -66,7 +66,12 @@ const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
  * */
 gulp.task('default', dev);
 
+<<<<<<< HEAD
 /**
  * Экспорт сценариев
  * */
 export { dev, build, deployZIP, deployFTP, createSvgSprite };
+=======
+
+export { dev, build, deployZIP, deployFTP, createSvgSprite, isBuild, isDev };
+>>>>>>> 689a7537b28868e04bb5eacba25443a36b05a01b

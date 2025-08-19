@@ -1,0 +1,31 @@
+.service-dev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+
+
+
+    &__text {
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+}
+
+.dev {
+
+    &__title {
+        min-height: 75px;
+    }
+}
+
+.dev-icons {
+    fill: $accentColor;
+    margin-top: 85px
+}
+
+// ----------------------------------------------------------------

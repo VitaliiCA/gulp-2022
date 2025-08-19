@@ -1,8 +1,13 @@
 // отступы безопасности для контейнера
 $main-offset: 15;
 
+<<<<<<< HEAD
 // максимальная ширина страницы
 $max-width: 1920;
+=======
+$mainOffset: 15; // отступы безопасности для контейнера
+$mainWeight: 400; // !указать здесь основное начертание шрифта
+>>>>>>> 689a7537b28868e04bb5eacba25443a36b05a01b
 
 // минимальная ширина телефона
 $min-width: 320;
@@ -10,7 +15,46 @@ $min-width: 320;
 // ширина контейнера из макета
 $container-width: 1160;
 
+<<<<<<< HEAD
 // ширина контейнера с учетом padding слева и справа
 $max-width-container: $container-width + ($main-offset * 2);
 $header-height: 100;
 $footer-height: 100;
+=======
+$whiteColor: #fff;
+$blackColor: #000;
+$textColor: #303030;
+
+
+
+// $accentColor: #00e098;
+$accentColor: #86C232;
+$secondColor: #61892F;
+$darkGrey: #17191a;
+// $darkGrey: #222629;
+
+$greyColor: #474B4F;
+$lightGrey: #6B6E70;
+
+
+
+$chapterColor: #070707;
+$hoverColor: #0019ff;
+$sectionBackground: #0a0912;
+$sectionBackgroundsec: #111210;
+
+$fontFamily: 'Source Sans 3', sans-serif; // Семейство шрифта по умолчанию
+$fontColor: $blackColor; // Цвет шрифта по умолчанию
+$fontSize: 16; // Размер шрифта по умолчанию
+$fontWeight: $mainWeight; // Жирность шрифта по умолчанию
+
+$standartTrans: all 280ms ease-in-out 0ms;
+
+$btnBoxShadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
+
+$lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
+  0 0 8px 0 rgba(#000, 10%);
+
+$hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+  0 0 15px 0 rgba(#000, 10%);
+>>>>>>> 689a7537b28868e04bb5eacba25443a36b05a01b

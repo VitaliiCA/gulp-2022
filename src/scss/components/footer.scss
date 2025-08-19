@@ -2,6 +2,7 @@
 @use "../config/mixins" as *;
 
 .footer {
+<<<<<<< HEAD
 	padding-block: rem(20);
 	background: var(--black-color);
 
@@ -15,4 +16,96 @@
 			align-items: flex-start;
 		}
 	}
+=======
+  background-color: $blackColor;
+  padding: 50px 0;
+
+  &__text {
+    color: $whiteColor;
+    margin: 20px 0;
+  }
+
+  &__line {
+    border-bottom: 3px solid $accentColor;
+    width: 80px;
+  }
+>>>>>>> 689a7537b28868e04bb5eacba25443a36b05a01b
+}
+
+// .footer__container {
+
+
+
+
+//   // @media (min-width: 992px) {
+//   //     margin-left: 8.333333%;
+//   //     margin-right: 8.333333%;
+//   //   }
+// }
+
+.footer__tablet {
+  display: flex;
+  // justify-content: space-between;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.services {
+  // @media screen and (min-width: 768px) {
+  //     margin-left: 100px;
+  //   }
+
+  @media screen and (min-width: 1200px) {
+    &:nth-child(n) {
+      padding-left: 100px;
+    }
+  }
+
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: $accentColor;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    display: block;
+    position: relative;
+
+  }
+
+  &__item {
+    margin-top: 10px;
+  }
+
+  &__link {
+    color: $whiteColor;
+
+    font-size: 18px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    &:hover,
+    &:focus {
+      color: $lightGrey;
+
+    }
+  }
 }
