@@ -1,11 +1,44 @@
 <header class="header" data-lp>
-	<div class="header__container">
-		<a href="#" class="header__logo logo"></a>
-		<nav class="header__menu menu">
-			<ul class="menu__list">
-				<li class="menu__item"><a href="#" class="menu__link">Link</a></li>
-			</ul>
-		</nav>
-		<!-- @@include('./icon-menu.html', {}) -->
-	</div>
+    <div class="header__container">
+        <a href="/" class="header__logo logo" aria-label="GiftBox Home">
+            <img src="/images/logo.svg" alt="GiftBox Logo" />
+            <span class="logo__text">GiftBox</span>
+        </a>
+        <nav class="header__nav" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li><a href="/html/pages/home.html">Home</a></li>
+                <li><a href="/html/pages/catalog.html">Catalog</a></li>
+                <li><a href="/html/pages/about.html">About</a></li>
+                <li><a href="/html/pages/contact.html">Contact</a></li>
+                <li><a href="/html/pages/faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button class="currency-switcher" aria-label="Switch currency">
+                CAD / USD
+            </button>
+            <a href="#" class="cart-link" aria-label="Cart">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.6-8.39H6"/>
+                </svg>
+            </a>
+            <button class="burger" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile menu -->
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+        <ul>
+            <li><a href="/html/pages/home.html">Home</a></li>
+            <li><a href="/html/pages/catalog.html">Catalog</a></li>
+            <li><a href="/html/pages/about.html">About</a></li>
+            <li><a href="/html/pages/contact.html">Contact</a></li>
+            <li><a href="/html/pages/faq.html">FAQ</a></li>
+        </ul>
+    </nav>
 </header>

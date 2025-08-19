@@ -21,21 +21,25 @@ import { ftpDeploy } from './gulp/tasks/ftp-deploy.js';
 const isBuild = process.argv.includes('--build');
 const browserSyncInstance = browserSync.create();
 
-const handleServer = server.bind(null, browserSyncInstance);
-const handleHTML = html.bind(null, isBuild, browserSyncInstance);
-const handleSCSS = scss.bind(null, isBuild, browserSyncInstance);
-const handleJS = javascript.bind(null, !isBuild, browserSyncInstance);
-const handleImages = images.bind(null, isBuild, browserSyncInstance);
+const handleServer = (done) => {
+    server(browserSyncInstance);
+    done();
+};
+const handleHTML = () => html(isBuild, browserSyncInstance);
+const handleSCSS = () => scss(isBuild, browserSyncInstance);
+const handleJS = () => javascript(!isBuild, browserSyncInstance);
+const handleImages = () => images(isBuild, browserSyncInstance);
 
 /**
  * Наблюдатель за изменениями в файлах
  */
-function watcher() {
-	gulp.watch(filePaths.watch.static, copy);
-	gulp.watch(filePaths.watch.html, handleHTML);
-	gulp.watch(filePaths.watch.scss, handleSCSS);
-	gulp.watch(filePaths.watch.js, handleJS);
-	gulp.watch(filePaths.watch.images, handleImages);
+function watcher(done) {
+    gulp.watch(filePaths.watch.static, copy);
+    gulp.watch(filePaths.watch.html, handleHTML);
+    gulp.watch(filePaths.watch.scss, handleSCSS);
+    gulp.watch(filePaths.watch.js, handleJS);
+    gulp.watch(filePaths.watch.images, handleImages);
+    done();
 }
 
 /**

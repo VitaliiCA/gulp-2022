@@ -1,0 +1,23 @@
+@@include('html/head.html', { 'title': 'Конструктор подарков' })
+<body>
+    @@include('html/header.html')
+    <main class="page page--custom">
+        <h1>Custom Gift Box Designer</h1>
+        <form class="custom-box-form">
+            <!-- Example form fields for custom box options -->
+            <label>Choose products:</label>
+            <select><option>Product 1</option></select>
+            <!-- etc. -->
+            <button type="submit">Create Box</button>
+        </form>
+    </main>
+    @@include('html/footer.html')
+</body>
+@import './pages/home';
+@import './pages/catalog';
+@import './pages/product';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/faq';
+@import './pages/policy';
+@import './pages/custom';

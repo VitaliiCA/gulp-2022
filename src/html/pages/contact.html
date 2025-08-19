@@ -1,0 +1,19 @@
+@@include('html/head.html', { 'title': 'Контакты' })
+<body>
+    @@include('html/header.html')
+    <main class="page page--contact">
+        <h1>Contact Us</h1>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <div class="store-info">
+            <p>Address: ...</p>
+            <p>Email: ...</p>
+            <p>Phone: ...</p>
+        </div>
+    </main>
+    @@include('html/footer.html')
+</body>
